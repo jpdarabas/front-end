@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade html + css</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+        <div class="titulo">
+            Atendimento on-line
+        </div>
+        <div id="quadro">
+            <div id="chat">
+                <div class="msg-box-recebida">
+                    <div class="msg-atendente">Atendente diz:</div>
+                    <div class="msg-conteudo">Olá, como posso ajudá-lo?</div>
+                </div>
+            </div>
+            <form method="post">
+                <input type="text" id="mensagem" name="mensagem" placeholder="Digite sua mensagem..." required="required" autocomplete="off"/>
+                <button type="submit" id="enviar" name="enviar">ENVIAR
+                </button>
+            </form>
+        </div>
+
+    <script>
+         const chat = document.querySelector('#chat');
+        chat.scrollTop = chat.scrollHeight;
+
+        document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const mensagem = document.querySelector('#mensagem').value;
+
+        const sua_mensagem = document.createElement("div");
+        sua_mensagem.classList.add('msg-box-enviada');
+        
+        sua_mensagem.innerHTML = `<div class="msg-sua">Você diz:</div>
+                    <div class="msg-conteudo">${mensagem}</div>`;
+        chat.appendChild(sua_mensagem);
+        
+        function atendente_responde(mensagem){
+            return mensagem.charAt(0).replace(/[aeouáéóúàèòùãõâêôû]/gi, 'i').toUpperCase() + mensagem.slice(1).replace(/[aeouáéóúàèòùãõâêôû]/gi, 'i').toLowerCase();
+        };
+        mensagem_atendente = document.createElement("div");
+        mensagem_atendente.classList.add('msg-box-recebida');
+
+        mensagem_atendente.innerHTML = `<div class="msg-atendente">Atendente diz:</div>
+                    <div class="msg-conteudo">${atendente_responde(mensagem)}</div>`;
+
+        chat.appendChild(mensagem_atendente);
+
+        document.querySelector('#mensagem').value = '';
+        chat.scrollTop = chat.scrollHeight;
+        });
+    </script>
+        
+</body>
+</html>
