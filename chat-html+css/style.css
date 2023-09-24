@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "kylie's hand";
+    src: url('kylie s hand.ttf') format('truetype');
+  }
+@font-face {
+    font-family: "Shrek";
+    src: url('Shrek.ttf') format('truetype');
+  }
+@font-face {
+    font-family: "Avengeance Heroic Avenger";
+    src: url('AVENGEANCE HEROIC AVENGER.ttf') format('truetype');
+  }
+body {
+    margin: 6% 33%;
+    border: solid black 1px;
+}
+.titulo{
+    padding: 1% 2%;
+    border: solid black 1px;
+    color: #5F3DC4;
+    font-size: 1.68vw;
+    font-family: "kylie's hand";
+}
+#quadro{
+    border: solid black 1px;
+    padding: 1% 2%
+}
+#chat{
+    margin: 0px 0.25% 1% 0.25%;
+    border: solid black 1px;
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+.msg-box-recebida{
+    margin: 2.5% 14% 2.5% 1.5%;
+    display:flex;
+    flex-direction: column;
+    align-items:left;
+}
+.msg-box-enviada{
+    margin: 2.5% 1.5% 2.5% 14%;
+    display:flex;
+    flex-direction: column;
+    align-items:right;
+}
+.msg-conteudo{
+    border: solid #495057 2px;
+    padding: 2% 0.75%;
+    text-align: left;
+    color: #495057;
+    font-size: 1.05vw;
+    font-family: "Arial";
+    font-weight: bold;
+}
+.msg-atendente{
+    text-align: left;
+    color: #495057;
+    font-size: 1.05vw;
+    font-family: "Arial";
+    font-weight: bold;
+}
+.msg-sua{
+    text-align: right;
+    color: #495057;
+    font-size: 1.05vw;
+    font-family: "Arial";
+    font-weight: bold;
+}
+form{
+    display: flex;
+    margin: 3% 0.25%;
+}
+form input{
+    border: 1px solid black;
+    font-size: 1.05vw;
+    padding: 0.5% 2%;
+    outline: 0;
+    font-family: "Arial";
+    margin-right: 2%;
+    width: 70%;
+    height: 2.15vw;
+}
+::placeholder{
+    color: #8E959D;
+    font-size: 1.15vw;
+    font-family: "Shrek";
+    display: flex;
+}
+form button{
+    padding: 1.25% 2%;
+    background: repeating-linear-gradient(
+        135deg,
+        #fff,
+        #8E959D 1px,
+        #fff 6px
+    );
+    color: #087F5B;
+    font-size: 1.5vw;
+    font-family: "Avengeance Heroic Avenger";
+    width: 30%;
+    cursor: pointer;
+    height: 2.7vw;
+}

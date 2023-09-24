@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade html + css</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+        <div class="titulo">
+            Atendimento on-line
+        </div>
+        <div id="quadro">
+            <div id="chat">
+                <div class="msg-box-recebida">
+                    <div class="msg-atendente">Atendente diz:</div>
+                    <div class="msg-conteudo">Blabla blabla blabla</div>
+                </div>
+                <div class="msg-box-recebida">
+                    <div class="msg-atendente">Atendente diz:</div>
+                    <div class="msg-conteudo">Blabla blabla blabla</div>
+                </div>
+                <div class="msg-box-enviada">
+                    <div class="msg-sua">Você diz:</div>
+                    <div class="msg-conteudo">Blabla blabla blabla</div>
+                </div>
+                <div class="msg-box-enviada">
+                    <div class="msg-sua">Você diz:</div>
+                    <div class="msg-conteudo">Blabla blabla blabla</div>
+                </div>
+            </div>
+            <form method="post">
+                <input type="mensagem" id="mensagem" name="mensagem" placeholder="Digite sua mensagem..." required="required" />
+                <button type="submit" id="enviar" name="enviar">ENVIAR
+                </button>
+            </form>
+        </div>
+</body>
+</html>
